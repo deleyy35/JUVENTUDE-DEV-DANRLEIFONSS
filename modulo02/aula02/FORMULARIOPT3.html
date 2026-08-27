@@ -1,49 +1,57 @@
-
-<html>
-  <center
-<form action="#" method="post">
- 
-
-<form id="form-contato" action="/enviar" method="post">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite para a Festa</title>
+</head>
+<body>
 
 <center
-  <title></title><h1>Voce foi comviado a festa</h1>
-  <h3>Preencha o formulario</h3>
+  <h1>Você foi convidado para a festa!</h1>
+  <h3>Preencha o formulário</h3>
 
-  <label for="campo-nome">Nome completo</label><br>
-  <input type="text" id="campo-nome" name="nome"><br><br>
+  <form action="#" method="post">
+    
+    <label for="campo-nome">Nome completo:</label><br>
+    <input type="text" id="campo-nome" name="nome"><br><br>
 
-  <label>qual seu curso???</label><br><br>
-  <input type="radio" name="genero" value="feminino"> Engenharia<br>
-  <input type="radio" required name="genero" value="masculino"> Direito<br>
-   <input type="radio" id="curso-outro" name="curso" value="outro">
+    <label>Qual o seu curso?</label><br>
+    <input type="radio" id="curso-eng" name="curso" value="engenharia">
+    <label for="curso-eng">Engenharia</label><br>
+    
+    <input type="radio" id="curso-dir" name="curso" value="direito">
+    <label for="curso-dir">Direito</label><br>
+    
+    <input type="radio" id="curso-outro" name="curso" value="outro">
     <label for="curso-outro">Outro curso:</label><br>
     <input type="text" id="campo-outro-curso" name="outro_curso"><br><br>
 
-  <label for="campo-assunto">Assunto:</label><br>
-  <select id="campo-assunto" name="assunto">
-    <option value="duvida">Aluno da ufrb</option>
-    <option value="elogio">Comviado de fora</option>
-  
-  </select><br><br>
+    <label for="campo-vinculo">Vínculo com a instituição:</label><br>
+    <select id="campo-vinculo" name="vinculo">
+      <option value="ufrb">Aluno da UFRB</option>
+      <option value="externo">Convidado de fora</option>
+    </select><br><br>
+    
 
-  <label for="campo-mensagem">Qual sua expectativa??</label><br>
-  <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Nos conte <3"></textarea><br><br>
+    <label for="campo-mensagem">Deixe um recado ou expectativa para a festa:</label><br>
+    <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea><br><br>
 
-  <input type="checkbox" id="campo-aceite" name="aceite" value="sim">
-  <label for="campo-aceite">Obrigatorio a maior idade</label><br><br>
+     <h2>Entre em contato</h2>
+    <label for="campo-telefone">Telefone para contato:</label><br>
+    <input type="tel" id="campo-telefone" name="telefone"><br><br>
 
-  <button type="submit">Enviar</button>
-  </center>
-</form>
+    <label for="campo-email">E-mail de contato:</label><br>
+    <input type="email" id="campo-email" name="email"><br><br>
 
-<script>
+    <input type="checkbox" id="campo-maioridade" name="maioridade" value="sim">
+    <label for="campo-maioridade">Confirmo que sou maior de idade (Obrigatório)</label><br><br>
 
-  const formulario = document.querySelector("#form-contato")
+<label for="campo-mensagem">Meu contato:</label><br>
+    <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Me mande uma mensagem!!"></textarea><br><br>
 
-  formulario.addEventListener("submit",function (event) {
-    event.preventDefault();
-    alert("Esperamos por voce, muito obrigado");
-  });
-</script>
+    <button type="submit">Enviar</button>
+
+  </form>
+ </center>
+</body>
 </html>
