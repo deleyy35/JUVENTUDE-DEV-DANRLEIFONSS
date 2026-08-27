@@ -1,0 +1,49 @@
+
+<html>
+  <center
+<form action="#" method="post">
+ 
+
+<form id="form-contato" action="/enviar" method="post">
+
+<center
+  <title></title><h1>Voce foi comviado a festa</h1>
+  <h3>Preencha o formulario</h3>
+
+  <label for="campo-nome">Nome completo</label><br>
+  <input type="text" id="campo-nome" name="nome"><br><br>
+
+  <label>qual seu curso???</label><br><br>
+  <input type="radio" name="genero" value="feminino"> Engenharia<br>
+  <input type="radio" required name="genero" value="masculino"> Direito<br>
+   <input type="radio" id="curso-outro" name="curso" value="outro">
+    <label for="curso-outro">Outro curso:</label><br>
+    <input type="text" id="campo-outro-curso" name="outro_curso"><br><br>
+
+  <label for="campo-assunto">Assunto:</label><br>
+  <select id="campo-assunto" name="assunto">
+    <option value="duvida">Aluno da ufrb</option>
+    <option value="elogio">Comviado de fora</option>
+  
+  </select><br><br>
+
+  <label for="campo-mensagem">Qual sua expectativa??</label><br>
+  <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Nos conte <3"></textarea><br><br>
+
+  <input type="checkbox" id="campo-aceite" name="aceite" value="sim">
+  <label for="campo-aceite">Obrigatorio a maior idade</label><br><br>
+
+  <button type="submit">Enviar</button>
+  </center>
+</form>
+
+<script>
+
+  const formulario = document.querySelector("#form-contato")
+
+  formulario.addEventListener("submit",function (event) {
+    event.preventDefault();
+    alert("Esperamos por voce, muito obrigado");
+  });
+</script>
+</html>
